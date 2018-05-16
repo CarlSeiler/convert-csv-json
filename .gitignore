@@ -1,3 +1,7 @@
+#input and output files for testing
+customer*.csv
+customer*.json
+
 # Logs
 logs
 *.log
