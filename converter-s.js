@@ -17,7 +17,8 @@ fs.unlink(outputFile, function (err) {
 	});
 
 // Convert csv file to json file and output to disc
-csv()
+csv({
+		})
   .fromFile(inputFile)
   .on('json',(jsonObj, lineNumber)=>{
 	  
