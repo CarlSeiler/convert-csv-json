@@ -97,5 +97,5 @@ to be the case until they examine it.
     2. What happens if the **input file is not valid CSV**? Currently, the 
     system still convert it anyway.  The results are unpredictable.
     3. What happens if the **output file is not writable** (immutable,
-     for example)?  Currently, an error is thrown and that's it.
+     for example)?  Currently, an error is thrown, and that's it.
     
