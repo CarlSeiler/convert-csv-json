@@ -22,11 +22,11 @@ const converter = (inputFile = './customer-data.csv',
     csv()
         .fromFile(inputFile)
         .on('json', (jsonObj, lineNumber) => {
-            outputArray.push(JSON.stringify(jsonObj, null, 4));
+            outputArray.push(jsonObj);
         })
         .on('done', (error) => {
 
-            fs.appendFile(outputFile, outputArray.toString(), function(err) {
+            fs.appendFile(outputFile, JSON.stringify(outputArray, null, 4), function(err) {
                 if (err) throw err;
                 
             });
