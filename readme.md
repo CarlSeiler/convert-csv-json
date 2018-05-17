@@ -1,4 +1,4 @@
-# CSV to JSON Coverter
+# CSV to JSON Converter
 
 ## A project for [Introduction to NodeJS](https://courses.edx.org/courses/course-v1:Microsoft+DEV283x+1T2018/course/ "Microsoft: DEV283x - Introduction to NodeJS") Course at edX
 
@@ -99,7 +99,7 @@ to be the case until they examine it.
     3. What happens if the **output file is not writable** (immutable,
      for example)?  Currently, an error is thrown, and that's it.
     4. Since this builds a large array before it saves it to a file
-rather than writing to the file indidually as it builds the JSON,
+rather than writing to the file individually as it builds the JSON,
 what happens if the array is too large for the memory of the running
 machine?  This needs to be addressed, possibly by using some sort of 
 streaming feature, which I have not yet figured out.
