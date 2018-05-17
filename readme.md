@@ -98,4 +98,8 @@ to be the case until they examine it.
     system still convert it anyway.  The results are unpredictable.
     3. What happens if the **output file is not writable** (immutable,
      for example)?  Currently, an error is thrown, and that's it.
-    
+    4. Since this builds a large array before it saves it to a file
+rather than writing to the file indidually as it builds the JSON,
+what happens if the array is too large for the memory of the running
+machine?  This needs to be addressed, possibly by using some sort of 
+streaming feature, which I have not yet figured out.
