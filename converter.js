@@ -26,7 +26,7 @@ const converter = (inputFile = './customer-data.csv',
         })
         .on('done', (error) => {
 
-            fs.appendFile(outputFile, JSON.stringify(outputArray, null, 4), function(err) {
+            fs.appendFile(outputFile, JSON.stringify(outputArray, null, 2), function(err) {
                 if (err) throw err;
                 
             });
