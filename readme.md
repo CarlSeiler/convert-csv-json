@@ -49,20 +49,22 @@ fs.unlink(outputFile, function(err) {
 Then the call to the _csvtojson_ function _csv_ itself:
 
 ```javascript
-csv()
+ csv()
         .fromFile(inputFile)
-        .on('json', (jsonObj, lineNumber) => {
+        .subscribe((jsonObj, lineNumber) => {
             outputArray.push(jsonObj);
         })
-        .on('done', (error) => {
+        .then((error) => {
 
-            fs.appendFile(outputFile, JSON.stringify(outputArray), function(err) {
+            fs.appendFile(outputFile, JSON.stringify(outputArray, null, 2), function(err) {
                 if (err) throw err;
                 
             });
             console.log('Conversion completed.');
         });
 ```
+Note that since version 1.0.3, this uses .subscribe and .then instead of 
+the old callbacks with .on events.
 
 It uses the _inputFile_ which is either the default or supplied by the 
 user as an argument. Each line of the CSV file is read and converted 
