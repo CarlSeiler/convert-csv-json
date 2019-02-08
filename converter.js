@@ -21,10 +21,10 @@ const converter = (inputFile = './customer-data.csv',
     // Convert csv file to json file and output to disc
     csv()
         .fromFile(inputFile)
-        .on('json', (jsonObj, lineNumber) => {
+        .subscribe((jsonObj, lineNumber) => {
             outputArray.push(jsonObj);
         })
-        .on('done', (error) => {
+        .then((error) => {
 
             fs.appendFile(outputFile, JSON.stringify(outputArray, null, 2), function(err) {
                 if (err) throw err;
